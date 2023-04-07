@@ -1,4 +1,4 @@
-interface ColorType {
+export interface ColorType {
     id: number,
     name: string,
     color: string
