@@ -6,16 +6,21 @@ import classes from "./Header.module.css"
 import Title from "./Title"
 import ColorList from "./Color/ColorList"
 
-const Header = () => {
+interface Props {
+    handleClickColorCode: (color: string) => void
+    colorCode: string,
+}
+
+const Header = (props: Props) => {
     return (
-        <div className={classes['header-wrap']}>
+        <div className={classes['header-wrap']} style={{ backgroundColor: props.colorCode }}>
             <div>
-                <Title title="택배조회 시스템" />
+                <Title title="택배조회 시스템" className="header-title" />
             </div>
 
             <div className={classes["header-change-color"]}>
-                <Title title="색상변경 :" />
-                <ColorList />
+                <Title className="header-title" title="색상변경 :" />
+                <ColorList handleClickColorCode={props.handleClickColorCode} />
             </div>
         </div>
     )
