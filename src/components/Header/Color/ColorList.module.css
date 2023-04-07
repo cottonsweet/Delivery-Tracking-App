@@ -2,9 +2,14 @@
     list-style: none;
     display: flex;
     margin: 0;
-    padding: 0 0 0 15px;
+    padding: 0 0 0 5px;
+
 }
 
 .color-item__list {
-    margin: 0 10px
+    margin: 0 5px
+}
+
+.color-item li {
+    cursor: pointer;
 }
