@@ -20,7 +20,7 @@ const Header = (props: Props) => {
 
             <div className={classes["header-change-color"]}>
                 <Title className="header-title" title="색상변경 :" />
-                <ColorList handleClickColorCode={props.handleClickColorCode} />
+                <ColorList handleClickColorCode={props.handleClickColorCode} colorCode={props.colorCode} />
             </div>
         </div>
     )
