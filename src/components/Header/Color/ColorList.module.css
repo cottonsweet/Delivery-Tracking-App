@@ -12,4 +12,9 @@
 
 .color-item li {
     cursor: pointer;
+
+}
+
+.activiteColor {
+    text-decoration: underline;
 }
