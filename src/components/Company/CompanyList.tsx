@@ -14,7 +14,8 @@ interface CompanyType {
 }
 
 interface Props {
-    handleSetCompanyCode: (code: string) => void
+    handleSetCompanyCode: (code: string) => void,
+    colorCode: string
 }
 
 
@@ -41,7 +42,7 @@ const CompanyList = (props: Props) => {
 
 
     return (
-        <select onChange={handleChangeCompanyCode}>
+        <select onChange={handleChangeCompanyCode} className={classes["company-select"]} style={{ border: "1px solid" + props.colorCode }}>
             <option>없음</option>
             {companyList?.Company?.map((data, i) => (
                 <option key={i} value={data.Code}>
