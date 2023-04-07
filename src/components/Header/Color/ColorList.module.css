@@ -1,0 +1,10 @@
+.color-item {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0 0 0 15px;
+}
+
+.color-item__list {
+    margin: 0 10px
+}
