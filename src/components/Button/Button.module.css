@@ -15,3 +15,13 @@
     color: white;
     font-weight: bold;
 }
+
+.close-btn {
+    width: 33%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}

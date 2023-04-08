@@ -5,7 +5,7 @@ interface Props {
     title: string,
     className?: string,
     colorCode: string,
-    activiteBtnSystem: boolean,
+    activiteBtnSystem?: boolean,
     onClick?: () => void
 }
 
