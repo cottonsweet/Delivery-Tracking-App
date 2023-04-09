@@ -1,0 +1,32 @@
+.tracking-view {
+    height: 100vh;
+    background-color: #F7F8F9
+}
+
+.tracking-view__container {
+    width: 100%;
+    height: auto;
+    min-width: 400px;
+    max-width: 50%;
+    margin-top: 80px;
+    background-color: white;
+}
+
+.tracking-view__system {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0 10px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.tracking-view__select {
+    width: 100%;
+    padding: 15px 0 10px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.tracking-view__formWrap {
+    width: 100%;
+    padding: 15px 0 10px 0;
+}
