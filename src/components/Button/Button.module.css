@@ -1,27 +1,30 @@
 .system-btn {
-    width: 80px;
-    height: 30px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
+  width: 80px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .post-btn {
-    width: 100%;
-    height: 40px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .close-btn {
-    width: 33%;
-    height: 40px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    margin-top: 10px;
+  width: 33%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
 }
