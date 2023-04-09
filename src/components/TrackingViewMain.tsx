@@ -20,7 +20,7 @@ const TrackingViewMain = () => {
   const [trackingModal, setTrackingModal] = useState(false);
 
   const BASE_URL = "https://info.sweettracker.co.kr/api/v1";
-  const API_KEY = "fwM3wePoMWuqF5k3n1f30Q";
+  const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
 
   // 사용자가 입력한 운송장번호를 저장하는 함수
   const handleChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
