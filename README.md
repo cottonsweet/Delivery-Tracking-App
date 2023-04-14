@@ -17,7 +17,7 @@
 
 ## 최종 구현 화면
 
-- netlify - [https://master--delivery-tracking-sst.netlify.app/](https://master--delivery-tracking-sst.netlify.app/)
+- netlify - [https://delivery-tracking-sst.netlify.app/](https://delivery-tracking-sst.netlify.app/)
 
 <img src="src/assets/deliveryCoverImg.PNG" width="100%" alt="coverImg"/>
 
