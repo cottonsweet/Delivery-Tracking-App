@@ -1,5 +1,7 @@
 # Delivery-Tracking-App - 택배 조회 서비스
 
+<img src="https://i.imgur.com/6HgwrwJ.png" width="100%" alt="metaImg"/>
+
 
 스마트택배 API를 활용하여 나의 택배 현황 조회 웹 페이지 구현하기
 
