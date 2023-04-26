@@ -16,7 +16,7 @@ const TrackingViewMain = () => {
   const [companyCode, setCompanyCode] = useState("");
   const [invoice, setInvoice] = useState("");
   const [trackingInfo, setTrackingInfo] = useState();
-  const [activiteBtnSystem, setActiviteBtnSystem] = useState(false);
+  const [activiteBtnSystem, setActiviteBtnSystem] = useState(true);
   const [colorCode, setColorCode] = useState("#6366F1");
   const [trackingModal, setTrackingModal] = useState(false);
   const [loading, setLoading] = useState(false)
@@ -35,10 +35,11 @@ const TrackingViewMain = () => {
     const data = await fetch(`${BASE_URL}/trackingInfo?t_code=${companyCode}&t_invoice=${invoice}&t_key=${API_KEY}`);
     const json = await data.json();
     setLoading(false)
+    setTrackingInfo(json);
     if (companyCode === "") return alert("택배사를 선택 해주셔야 합니다.");
     if (json.status === false) return alert("운송장 번호가 유효하지 않습니다.");
-    setTrackingInfo(json);
     setTrackingModal(true);
+    return
   };
 
   // CompanyList(하위컴포넌트)로 부터 받아온 데이터를 state 함수에 저장
