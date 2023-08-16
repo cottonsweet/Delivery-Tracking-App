@@ -4,6 +4,7 @@
   position: absolute;
   top: 0;
   overflow: hidden;
+  background-color:rgba(0, 0, 0, 0.7)
 }
 
 .tracking-result__container {
