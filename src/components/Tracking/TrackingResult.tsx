@@ -3,20 +3,12 @@ import classes from "./TrackingResult.module.css";
 
 // Components
 import Button from "../Button/Button";
-import { useEffect } from "react";
 
-interface DetailType {
-  kind: string;
-  where: string;
-  timeString: string;
-}
-
-interface TrackingType {
-  trackingDetails: DetailType[];
-}
+// api
+import { TrackingType } from "../../api/delivery";
 
 interface Props {
-  trackingInfo?: any;
+  trackingInfo: TrackingType | undefined;
   colorCode: string;
   activiteBtnSystem: boolean;
   handleTrackingModal: () => void;
@@ -24,7 +16,6 @@ interface Props {
 
 const TrackingResult = (props: Props) => {
   const closeModal = () => props.handleTrackingModal();
-
 
   return (
     <div className={classes["tracking-result"]}>
@@ -37,7 +28,7 @@ const TrackingResult = (props: Props) => {
           <div>위치</div>
           <div>시간</div>
         </div>
-        {props.trackingInfo?.trackingDetails?.map((data: any, i: any) => (
+        {props.trackingInfo?.trackingDetails?.map((data, i) => (
           <div key={i} className={classes["tracking-result__data"]}>
             <div>{data.kind}</div>
             <div>{data.where}</div>
