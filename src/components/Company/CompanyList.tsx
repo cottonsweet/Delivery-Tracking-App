@@ -61,4 +61,4 @@ const CompanyList = (props: Props) => {
   );
 };
 
-export default CompanyList
+export default CompanyList;
