@@ -39,6 +39,8 @@ const TrackingViewMain = () => {
   const [colorCode, setColorCode] = useState("#6366F1");
   // 운송장 모달
   const [trackingModal, setTrackingModal] = useState(false);
+  // 택배 위치 결과
+  const [result, setResult] = useState<TrackingType>();
 
   // 사용자가 입력한 운송장번호를 저장하는 함수
   const handleChangeInput = (e: React.ChangeEvent<HTMLInputElement>) =>
@@ -57,12 +59,12 @@ const TrackingViewMain = () => {
   const handleTrackingModal = () => setTrackingModal((prev) => !prev);
 
   // 조회 요청하는 함수
-  const submitHandler = async (): Promise<TrackingType> => {
+  const submitHandler = async () => {
     const result = await getDeliveryInqResult(companyCode, invoice);
     if (result !== undefined) {
       setTrackingModal(true);
+      return setResult(result);
     }
-    return result;
   };
 
   const {
@@ -70,7 +72,10 @@ const TrackingViewMain = () => {
     isLoading: _invoiceLoading,
     isError: _invoiceIsError,
     error: _inVoiceError,
-  } = useQuery("DeliveryInvoiceResult", submitHandler, { enabled: false });
+  } = useQuery("DeliveryInvoiceResult", submitHandler, {
+    enabled: false,
+    refetchOnWindowFocus: false, // Window Focus Refetch
+  });
 
   if (_invoiceLoading) return <Loading />;
 
@@ -125,7 +130,7 @@ const TrackingViewMain = () => {
       </div>
       {trackingModal && (
         <TrackingResult
-          trackingInfo={_invoiceData}
+          trackingInfo={result}
           colorCode={colorCode}
           handleTrackingModal={handleTrackingModal}
           activiteBtnSystem={activiteBtnSystem}

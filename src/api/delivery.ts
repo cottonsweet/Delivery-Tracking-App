@@ -9,27 +9,31 @@ export const getAllCompanyList = async () => {
   return _json;
 };
 
-interface DetailType {
-  kind: string;
-  where: string;
-  timeString: string;
-}
-
-interface TrackingType {
-  trackingDetails: DetailType[];
+export interface TrackingType {
+  trackingDetails: {
+    kind: string;
+    where: string;
+    timeString: string;
+  }[];
 }
 
 // 배송조회 결과
 export const getDeliveryInqResult = async (
   companyCode: string,
   invoice: string
-) => {
-  if (companyCode === "") return alert("택배사를 선택 해주셔야 합니다.");
+): Promise<TrackingType> => {
+  if (companyCode === "") {
+    throw new Error("택배사를 선택 해주셔야 합니다.");
+  }
 
   const data = await fetch(
     `${BASE_URL}/trackingInfo?t_code=${companyCode}&t_invoice=${invoice}&t_key=${API_KEY}`
   );
   const _json = await data.json();
-  if (_json.status === false) return alert(_json.msg);
+
+  if (_json.status === false) {
+    throw new Error(_json.msg);
+  }
+
   return _json;
 };

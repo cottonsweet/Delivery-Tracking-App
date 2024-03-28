@@ -11,14 +11,14 @@
 - `async`, `await`로 비동기 프로그래밍 코드 작성
 - `CSS` module 관리로, 컴포넌트별 CSS 관리 편리 및 클래스 명의 전역 중복(오염) 방지
 - `React-Query`로 비동기 프로그래밍 API 통신처리
-- `vite create` 및 `netlify` 배포
+- `vite create` 및 `Vercel` 배포
 - 사용자의 입맛대로 `커스텀 테마` (5종)
 
 <br>
 
 ## 최종 구현 화면
 
-- netlify - [https://delivery-tracking-sst.netlify.app/](https://delivery-tracking-sst.netlify.app/)
+- Vercel - [바로가기 링크 !](https://delivery-tracking-app-one.vercel.app/)
 
 <img src="src/assets/deliveryCoverImg.PNG" width="100%" alt="coverImg"/>
 
