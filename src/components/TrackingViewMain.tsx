@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 // CSS
 import classes from "./TrackingViewMain.module.css";
